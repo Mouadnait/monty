@@ -1,4 +1,5 @@
 #include "monty.h"
+
 /**
  * f_swap - adds the top two elements of the stack.
  * @head: stack head
@@ -119,22 +120,5 @@ void addqueue(stack_t **head, int n)
 	{
 		aux->next = new_node;
 		new_node->prev = aux;
-	}
-}
-
-/**
- * free_stack - frees a doubly linked list
- * @head: head of the stack
- */
-void free_stack(stack_t *head)
-{
-	stack_t *aux;
-
-	aux = head;
-	while (head)
-	{
-		aux = head->next;
-		free(head);
-		head = aux;
 	}
 }
