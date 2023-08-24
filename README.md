@@ -15,22 +15,19 @@ The project is organized as follows:
 ├── monty
 ├── monty.h
 ├── execute.c
-├── main.c
-├── operations:
-|  ├── op_push.c
-|  ├── op_pall.c
-|  ├── op_pint.c
-|  ├── op_pop.c
-|  ├── op_swap.c
-|  ├── op_add.c
-|  ├── op_sub.c
-|  ├── op_div.c
-|  ├── op_mul.c
-|  ├── op_mod.c
-|  ├── op_pchar.c
-|  ├── op_pstr.c
-|  └── op_nop.c
-├── free_stack.c
+├── monty.c
+├── instrection1:
+|  ├── f_nop()
+|  ├── f_pall()
+|  ├── f_pint()
+|  ├── f_pop()
+|  └── f_push()
+├── instrection2:
+|  ├── f_swap()
+|  ├── f_add()
+|  ├── addnode()
+|  └── addqueue()
+├── freeStack.c
 └── bytecodes
     ├── 00.m
     ├── 01.m
@@ -46,11 +43,13 @@ The project is organized as follows:
 
 `execute.c:` the file containing the execute_opcode() function that determines the opcode to be executed.
 
-`main.c:` the file containing the main() function that reads the bytecode file and executes the opcodes.
+`monty.c:` the file containing the main() function that reads the bytecode file and executes the opcodes.
 
-`operations:` these are files containing the functions for each opcode (push(), pint(), pop(), swap(), add(), nop()).
+`intrection1:` these are files containing the functions for each opcode (push(), pint(), pop(), nop(), pall()).
 
-`stack.c:` the file containing the stack functions (stack_len(), push_stack(), pop_stack(), free_stack()).
+`intrection2:` these are files containing the functions for each opcode (swap(), add(), queue()).
+
+`freeStack.c:` the file containing the stack functions (free_stack()).
 
 `bytecodes:` a folder containing the bytecode files to be executed by the monty program.
 
